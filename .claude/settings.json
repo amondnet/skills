@@ -55,8 +55,9 @@
     "vuefire@passionfactory": false,
     "auth-skills@better-auth-agent-skills": false,
     "claude-md-management@passionfactory": true,
-    "gardening침@passionfactory": true,
+    "gardening@passionfactory": true,
     "nuxt@pleaseai": true,
+    "gatekeeper@pleaseai": true,
     "vue@pleaseai": true,
     "turborepo@pleaseai": true,
     "pinia@pleaseai": false,
@@ -64,6 +65,7 @@
     "tsdown@pleaseai": false,
     "vueuse@pleaseai": true,
     "fetch@pleaseai": true,
+    "flutter@pleaseai": true,
     "markitdown@pleaseai": true
   },
   "extraKnownMarketplaces": {

@@ -4,3 +4,6 @@
 [submodule "antfu-skills"]
 	path = antfu-skills
 	url = https://github.com/antfu/skills
+[submodule "sources/riverpod"]
+	path = sources/riverpod
+	url = https://github.com/rrousselGit/riverpod
