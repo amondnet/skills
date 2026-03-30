@@ -4,6 +4,8 @@
 export const submodules = {
   'mobx.dart': 'https://github.com/amondnet/mobx.dart',
   'riverpod': 'https://github.com/rrousselGit/riverpod',
+  'orpc': 'https://github.com/middleapi/orpc',
+  'electron': 'https://github.com/electron/electron',
 }
 
 /**
