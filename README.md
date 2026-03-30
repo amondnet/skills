@@ -29,7 +29,7 @@ bun install
 | Command | Description |
 |---------|-------------|
 | `bun start init` | Add new submodules defined in `meta.ts` |
-| `bun start sync` | Pull latest and sync vendored skills |
+| `bun start sync` | Pull latest submodule updates |
 | `bun start check` | Check for available upstream updates |
 | `bun start cleanup` | Remove unused submodules and skills |
 
@@ -43,14 +43,11 @@ Add `-y` flag to skip interactive prompts.
 ├── AGENTS.md            # Skill generation guidelines
 ├── instructions/        # Per-project generation instructions
 ├── sources/             # Cloned repos (generate skills from docs)
-├── vendor/              # Projects with existing skills (sync only)
-├── skills/              # Output directory (generated or synced)
+├── skills/              # Output directory (generated skills)
 └── scripts/cli.ts       # CLI tool
 ```
 
 ## Adding a New Project
-
-### Type 1: Generate from docs
 
 Add to `submodules` in `meta.ts`:
 
@@ -58,21 +55,6 @@ Add to `submodules` in `meta.ts`:
 export const submodules = {
   'mobx.dart': 'https://github.com/amondnet/mobx.dart',
   'new-project': 'https://github.com/org/repo',
-}
-```
-
-### Type 2: Sync existing skills
-
-Add to `vendors` in `meta.ts`:
-
-```ts
-export const vendors = {
-  'project-name': {
-    source: 'https://github.com/org/repo',
-    skills: {
-      'source-skill-name': 'output-skill-name',
-    },
-  },
 }
 ```
 
