@@ -1,5 +1,5 @@
 [submodule "mobx.dart"]
-	path = mobx.dart
+	path = sources/mobx.dart
 	url = https://github.com/amondnet/mobx.dart
 [submodule "antfu-skills"]
 	path = antfu-skills
