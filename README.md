@@ -10,55 +10,25 @@ Based on [antfu/skills](https://github.com/antfu/skills) — a proof-of-concept 
 pnpx skills add amondnet/skills --skill='*'
 ```
 
-## Development Setup
+### Install specific skills
 
 ```bash
-bun install
+pnpx skills add amondnet/skills --skill='mobx.dart'
+pnpx skills add amondnet/skills --skill='riverpod'
+pnpx skills add amondnet/skills --skill='orpc'
 ```
 
-## Usage
+## Available Skills
 
-### Generate skills from source
+| Skill | Description |
+|-------|-------------|
+| [mobx.dart](skills/mobx.dart/SKILL.md) | MobX.dart reactive state management for Dart/Flutter |
+| [riverpod](skills/riverpod/SKILL.md) | Riverpod state management for Dart/Flutter |
+| [orpc](skills/orpc/SKILL.md) | oRPC end-to-end typesafe API framework |
 
-1. Update `meta.ts` with project sources
-2. Run `bun start init -y` to clone submodules
-3. Ask your agent to: *"Generate skills for mobx.dart"*
+## Contributing
 
-### CLI Commands
-
-| Command | Description |
-|---------|-------------|
-| `bun start init` | Add new submodules defined in `meta.ts` |
-| `bun start sync` | Pull latest submodule updates |
-| `bun start check` | Check for available upstream updates |
-| `bun start cleanup` | Remove unused submodules and skills |
-
-Add `-y` flag to skip interactive prompts.
-
-## Structure
-
-```
-.
-├── meta.ts              # Project sources and vendor configs
-├── AGENTS.md            # Skill generation guidelines
-├── instructions/        # Per-project generation instructions
-├── sources/             # Cloned repos (generate skills from docs)
-├── skills/              # Output directory (generated skills)
-└── scripts/cli.ts       # CLI tool
-```
-
-## Adding a New Project
-
-Add to `submodules` in `meta.ts`:
-
-```ts
-export const submodules = {
-  'mobx.dart': 'https://github.com/amondnet/mobx.dart',
-  'new-project': 'https://github.com/org/repo',
-}
-```
-
-See `AGENTS.md` for detailed generation guidelines.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and how to add new skills.
 
 ## License
 
